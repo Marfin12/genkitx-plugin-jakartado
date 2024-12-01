@@ -30,16 +30,14 @@ To integrate the plugin into your project, follow the steps below:
 1. Install the plugin via npm:
    ```bash
    npm install genkitx-plugin-jakartado@0.0.5
-Import the necessary module in your code:
-
+      
+2. Add the plugin to your AI configuration:
    ```bash
-   import { devFestAlgebric } from "genkitx-plugin-jakartado";
-Add the plugin to your AI configuration:
-
-   ```bash
+   import { devFestAlgebric } from "genkitx-plugin-jakartado"
    plugins: [
      // ... your previous A.I plugins
      devFestAlgebric({ apiKey: "your-api-key" })
    ],
+
 
 License : Apache 2.0
