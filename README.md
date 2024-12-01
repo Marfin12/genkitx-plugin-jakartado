@@ -24,33 +24,21 @@ Output (AI):
 "Step 2: Divide both sides by 2: 𝑥=2"
 
 ## Installation
-To use this plugin in your project:
 
-Install the required dependencies:
+To integrate the plugin into your project, follow the steps below:
 
-bash
-Copy code
-npm install @genkit-ai/ai @genkit-ai/googleai
-Clone this repository:
+1. Install the plugin via npm:
+   ```bash
+   npm install genkitx-plugin-jakartado@0.0.5
+Import the necessary module in your code:
 
-bash
-Copy code
-git clone https://github.com/your-repo/genkit-jakartado-plugin.git
-Import and configure the plugin in your project:
+import { devFestAlgebric } from "genkitx-plugin-jakartado";
+Add the plugin to your AI configuration:
 
-javascript
-Copy code
-import { retrieveResponse } from "./path-to-plugin";
-
-const response = await retrieveResponse({
-    prompt: "Solve 2x + 3 = 7",
-    temperature: 0.1,
-    maxOutputTokens: 500,
-    topK: 1,
-    topP: 0,
-}, {
-    apiKey: "your-api-key",
-});
+plugins: [
+  // ... your previous A.I plugins
+  devFestAlgebric({ apiKey: "your-api-key" })
+],
 
 console.log(response);
 
